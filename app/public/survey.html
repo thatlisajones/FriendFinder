@@ -1,12 +1,238 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Survey Page</h1>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet"
+       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+       integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+       crossorigin="anonymous">
+    <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+      <!--Import jQuery before materialize.js-->
+      <div class="container-fluid">
+        <div class="jumbotron">
+          <h1 class="text-center">
+            <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+            Fake Friend Survey
+          </h1>
+          <hr></hr>
+          <h3 class="text-center">
+            Rate your responses to the statements below.
+          </h3>
+          <p class="text-center">
+            <!-- <a class="btn btn-warning btn-lg" href="/friends" role="button">
+              <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+              View Possible Matches
+            </a> -->
+            <a class="btn btn-default btn-lg" href="/" role="button">
+              <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+            </a>
+          </p>
+        </div>
+        
+    <div class="container content">
+		<h3>Where do you stand?</h3>
+		<form>
+			<div class="form-group">
+				<input id="name" type="text" class="form-control" placeholder="Your name (required)">
+			</div>
+			<div class="form-group">
+				<input id="photo" type="text" class="form-control" placeholder="Link to your profile photo (required)">
+			</div>
+			<div class="form-group">
+				<label for="question1">Cats have been trained to spy on thier owners.</label>
+				<select class="form-control" id="question1">
+					<option value="empty">Rate your response</option>
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (strongly agree)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question2">U.S. government agencies have participated in mind-control research and experiments using unsuspecting people as test subjects.</label>
+				<select class="form-control" id="question2">
+					<option value="empty">Rate your response</option>
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (strongly agree)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question3">It's mean to make fun of people who believe in UFOs and extraterrestrials -- because who can know for sure?</label>
+				<select class="form-control" id="question3">
+					<option value="empty">Rate your response</option>
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (strongly agree)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question4">Coordinated disinformation campaigns have NO effect on the outcome of elections.</label>
+				<select class="form-control" id="question4">
+					<option value="empty">Rate your response</option>
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (strongly agree)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question5">The sinking of the Titanic was a deliberate act.</label>
+				<select class="form-control" id="question5">
+					<option value="empty">Rate your response</option>
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (strongly agree)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question6">Paul McCartney died in 1966 and was replaced by a look-alike.</label>
+				<select class="form-control" id="question6">
+					<option value="empty">Rate your response</option>
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (strongly agree)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question7">Five U.S. presidents lied to the American public to justify the Vietnam War.</label>
+				<select class="form-control" id="question7">
+					<option value="empty">Rate your response</option>
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (strongly agree)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question8">Donald Trump is the only U.S. president NOT controlled by the Illuminati.</label>
+				<select class="form-control" id="question8">
+					<option value="empty">Rate your response</option>
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (strongly agree)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question9">Magic and miracles happen every day regardless of my beliefs.</label>
+				<select class="form-control" id="question9">
+					<option value="empty">Rate your response</option>
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (strongly agree)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question10">Discrepancies between my memories and the real world are proof that I have experienced an alternate dimension of reality.</label>
+				<select class="form-control" id="question10">
+					<option value="empty">Rate your response</option>
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (strongly agree)</option>
+				</select>
+			</div>
+		</form>
+		<div class="text-center">
+			<button id="submitBtn" type="submit" class="btn btn-success btn-lg">Submit</button>
+		</div>
+		
+		<!-- Modal after survey completion -->
+		<div id="bestFriendModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h3 class="modal-title">This person is your nearest match:</h1>
+					</div>
+					<div class="modal-body">
+						<h2 id="bestFriend"></h2>
+						<img id="bestFriendPhoto" src="#">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container">
+			<a href="/api/friends">Friends API</a>
+			<span>|</span>
+			<a href="https://github.com/thatlisajones/FriendFinder">GitHub Repo</a>
+		</div>
+	</footer>
+
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+<script type="text/javascript">
+	$("#submitBtn").on("click", function(event) {
+		event.preventDefault();
+		// Form validation
+		var valid = true;
+		if($("#name").val() === "" || $("#photo").val() === "") {
+			valid = false;
+		} else if($("#question1").val() === "empty" || $("#question2").val() === "empty" || $("#question3").val() === "empty" || $("#question4").val() === "empty" || $("#question5").val() === "empty" || $("#question6").val() === "empty" || $("#question7").val() === "empty" || $("#question8").val() === "empty" || $("#question9").val() === "empty" || $("#question10").val() === "empty") {
+			valid = false;
+		}
+		if(valid === true) {
+			var newUser = {
+				name: $("#name").val().trim(),
+				photo: $("#photo").val().trim(),
+				scores: [
+					$("#question1").val(),
+					$("#question2").val(),
+					$("#question3").val(),
+					$("#question4").val(),
+					$("#question5").val(),
+					$("#question6").val(),
+					$("#question7").val(),
+					$("#question8").val(),
+					$("#question9").val(),
+					$("#question10").val()
+				]
+			};
+			var currentURL = window.location.origin;
+			// Ajax call for receiving response after POST req
+			$.post(currentURL + "/api/friends", newUser, function(data) {
+				$("#bestFriend").text(data.name);
+				$("#bestFriendPhoto").attr("src", data.photo);
+				$("#bestFriendModal").modal("toggle");
+			});
+		} else {
+			// If a required field is missing, show alert
+			alert("Survey is incomplete!");
+		}
+	});
+</script>
