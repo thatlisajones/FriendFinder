@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-// apiRoutes(app);
+apiRoutes(app);
 htmlRoutes(app);
 
 app.listen(PORT, function() {

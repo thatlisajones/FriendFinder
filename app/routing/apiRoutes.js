@@ -6,6 +6,6 @@ module.exports = function(app) {
   });
 
   app.post("/api/friends", function(req, res) {
-      waitlist.push(req.body);
+      friends.push(req.body);
     //   compare friends function here res.json here
-  });
+  });}
