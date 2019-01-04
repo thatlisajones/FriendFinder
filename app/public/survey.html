@@ -47,7 +47,7 @@
 			</div>
 			<div class="form-group">
 				<label for="question1">The Earth is flat.</label>
-				<select class="form-control" id="question1">
+				<select class="form-control" id="q1">
 					<option value="empty">Rate your response</option>
 					<option value="1">1 strongly disagree</option>
 					<option value="2">2 disagree</option>
@@ -58,7 +58,7 @@
 			</div>
 			<div class="form-group">
 				<label for="question2">U.S. government agencies have participated in mind-control research and experiments using unsuspecting people as test subjects.</label>
-				<select class="form-control" id="question2">
+				<select class="form-control" id="q2">
 					<option value="empty">Rate your response</option>
 					<option value="1">1 strongly disagree</option>
 					<option value="2">2 disagree</option>
@@ -69,7 +69,7 @@
 			</div>
 			<div class="form-group">
 				<label for="question3">It's mean to make fun of people who believe in UFOs and extraterrestrials -- because who can know for sure?</label>
-				<select class="form-control" id="question3">
+				<select class="form-control" id="q3">
 					<option value="empty">Rate your response</option>
 					<option value="1">1 strongly disagree</option>
 					<option value="2">2 disagree</option>
@@ -80,7 +80,7 @@
 			</div>
 			<div class="form-group">
 				<label for="question4">Coordinated disinformation campaigns have NO effect on the outcome of elections.</label>
-				<select class="form-control" id="question4">
+				<select class="form-control" id="q4">
 					<option value="empty">Rate your response</option>
 					<option value="1">1 strongly disagree</option>
 					<option value="2">2 disagree</option>
@@ -91,7 +91,7 @@
 			</div>
 			<div class="form-group">
 				<label for="question5">The sinking of the Titanic was a deliberate act.</label>
-				<select class="form-control" id="question5">
+				<select class="form-control" id="q5">
 					<option value="empty">Rate your response</option>
 					<option value="1">1 strongly disagree</option>
 					<option value="2">2 disagree</option>
@@ -102,7 +102,7 @@
 			</div>
 			<div class="form-group">
 				<label for="question6">Paul McCartney died in 1966 and was replaced by a look-alike.</label>
-				<select class="form-control" id="question6">
+				<select class="form-control" id="q6">
 					<option value="empty">Rate your response</option>
 					<option value="1">1 strongly disagree</option>
 					<option value="2">2 disagree</option>
@@ -113,7 +113,7 @@
 			</div>
 			<div class="form-group">
 				<label for="question7">Five U.S. presidents lied to the American public to justify the Vietnam War.</label>
-				<select class="form-control" id="question7">
+				<select class="form-control" id="q7">
 					<option value="empty">Rate your response</option>
 					<option value="1">1 strongly disagree</option>
 					<option value="2">2 disagree</option>
@@ -124,7 +124,7 @@
 			</div>
 			<div class="form-group">
 				<label for="question8">Donald Trump is the only U.S. president NOT controlled by the Illuminati.</label>
-				<select class="form-control" id="question8">
+				<select class="form-control" id="q8">
 					<option value="empty">Rate your response</option>
 					<option value="1">1 strongly disagree</option>
 					<option value="2">2 disagree</option>
@@ -135,7 +135,7 @@
 			</div>
 			<div class="form-group">
 				<label for="question9">Magic and miracles happen every day regardless of my beliefs.</label>
-				<select class="form-control" id="question9">
+				<select class="form-control" id="q9">
 					<option value="empty">Rate your response</option>
 					<option value="1">1 strongly disagree</option>
 					<option value="2">2 disagree</option>
@@ -146,7 +146,7 @@
 			</div>
 			<div class="form-group">
 				<label for="question10">Discrepancies between my memories and the real world are proof that I have experienced an alternate dimension of reality.</label>
-				<select class="form-control" id="question10">
+				<select class="form-control" id="q10">
 					<option value="empty">Rate your response</option>
 					<option value="1">1 strongly disagree</option>
 					<option value="2">2 disagree</option>
@@ -156,85 +156,128 @@
 				</select>
 			</div>
 		</form>
-		<div class="text-center">
-			<button id="submitBtn" type="submit" class="btn btn-success btn-lg">Submit</button>
-		</div>
-		
-		<!-- Modal after survey completion -->
-		<div id="bestFriendModal" class="modal fade" role="dialog">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h3 class="modal-title">This person is your nearest match:</h1>
-					</div>
-					<div class="modal-body">
-						<h2 id="bestFriend"></h2>
-						<img id="bestFriendPhoto" src="#">
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+		<br>
+           <button type="button" class="btn btn-lg btn-primary btn-block" data-target="#myModal" data-toggle="modal" id="submit">
+            <span class="glyphicon glyphicon-list-alt">
+            </span>
+            Submit </button>
 
-	<footer>
-		<div class="container">
-			<a href="/api/friends">Friends API</a>
-			<span>|</span>
-			<a href="https://github.com/thatlisajones/FriendFinder">GitHub Repo</a>
-		</div>
-	</footer>
+        <hr>
+        <a href="/api/friends" id="consoleAPIFriends"> API Friends List </a>
+        <br>
+        <br>
+    </div>
 
-	<script
-	  src="https://code.jquery.com/jquery-3.2.1.min.js"
-	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	  crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h2 class="modal-title" id="myModalLabel">Best Matches</h2>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" id="extra-button" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary" id="modal-button">Save changes</button> -->
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        
+        $("#submit").on("click", function (event) {
+            event.preventDefault();
+            var newFriend = {
+                friendName: $("#name").val().trim(),
+                photoURL: $("#photo").val().trim(),
+                scoreArray: [parseInt($("#q1").text()), parseInt($("#q2").text()), parseInt($("#q3").text()), parseInt($("#q4").text()), parseInt($("#q5").text()), parseInt($("#q6").text()), parseInt($("#q7").text()), parseInt($("#q8").text()), parseInt($("#q9").text()), parseInt($("#q10").text())
+                ]
+            }
+            // If requirements NOT met:
+            if (newFriend.friendName == "" || newFriend.photoURL == "" || newFriend.scoreArray.includes(NaN)) {
+                console.log("Please fill in all required info.");
+                $(".modal-body").text("Please fill in all required info.");
+                // $("#extra-button").addClass("hidden");
+                // $("#modal-button").text("Okay");
+                $.ajax({ url: "/api/friends", method: "GET" })
+                    .then(function (friendsData) {
+                        console.log(friendsData.length)
+                    });
+            }
+            // If requirements met:
+            else {
+                $.ajax({ url: "/api/friends", method: "GET" })
+                    .then(function (friendsData) {
+                        // console.log(friendsData.length)
+                        if (friendsData.length == 0) {
+                            // console.log("empty array")
+                            $(".modal-body").text("We can't find a match for you. You're one of a kind!");
+                        }
+                        else {
+                            var compatabilityScores = [];
+                            var scoresOnly = [];
+                            var minDif;
+                            function compare(me, friend) {
+                                var meArr = me['scoreArray'];
+                                var friendArr = friend['scoreArray[]'];
+                                var totalDif = 0;
+                                for (var i = 0; i < 10; i++) {
+                                    if (meArr[i] - parseInt(friendArr[i]) > 0) {
+                                        totalDif += Math.abs(meArr[i] - friendArr[i]);
+                                    }
+                                }
+                                var compatability = {
+                                    friendName: friend['friendName'],
+                                    photoURL: friend['photoURL'],
+                                    score: totalDif
+                                }
+                                compatabilityScores.push(compatability);
+                                scoresOnly.push(compatability.score);
+                                console.log(friend['friendName'], totalDif);
+                            }
+                            for (var i = 0; i < friendsData.length; i++) {
+                                var friend = friendsData[i];
+                                var friendScore = friend['scoreArray[]'];
+                                compare(newFriend, friend);
+                            }
+                            // console.log(compatabilityScores);
+                            // console.log(scoresOnly);
+                            // console.log(Math.min(...scoresOnly));
+                            for (var i = 0; i < compatabilityScores.length; i++) {
+                                friend = compatabilityScores[i]
+                                var friendScore = friend['score'];
+                                if (friendScore == Math.min(...scoresOnly)) {
+                                    // console.log(compatabilityScores[i]);
+                                    console.log("match", friend['friendName']);
+                                    $(".modal-body").text("");
+                                    $(".modal-body").append(friend['friendName']);
+                                    $(".modal-body").append("<img src=" + friend['photoURL'] + " class='img-responsive'>");
+                                }
+                            }
+                        }
+                    })
+                    $.post("/api/friends", newFriend, function (data) {
+                    console.log(data)
+                });
+            }
+        });
+        // $(".dropdown-menu li a").click(function () {
+        //     event.preventDefault();
+        //     var selText = $(this).text();
+        //     $(this).parents(".btn-group").find(".dropdown-toggle").html(selText + " <span class='caret'></span>").addClass("completed");
+        // })
+    </script>
 </body>
+
 </html>
-
-<!-- validate and package inputs to send to api.friends -->
-
-<!-- <script type="text/javascript">
-	$("#submitBtn").on("click", function(event) {
-		event.preventDefault();
-		// Form validation
-		var valid = true;
-		if($("#name").val() === "" || $("#photo").val() === "") {
-			valid = false;
-		} else if($("#question1").val() === "empty" || $("#question2").val() === "empty" || $("#question3").val() === "empty" || $("#question4").val() === "empty" || $("#question5").val() === "empty" || $("#question6").val() === "empty" || $("#question7").val() === "empty" || $("#question8").val() === "empty" || $("#question9").val() === "empty" || $("#question10").val() === "empty") {
-			valid = false;
-		}
-		if(valid === true) {
-			var newUser = {
-				name: $("#name").val().trim(),
-				photo: $("#photo").val().trim(),
-				scores: [
-					$("#question1").val(),
-					$("#question2").val(),
-					$("#question3").val(),
-					$("#question4").val(),
-					$("#question5").val(),
-					$("#question6").val(),
-					$("#question7").val(),
-					$("#question8").val(),
-					$("#question9").val(),
-					$("#question10").val()
-				]
-			};
-			var currentURL = window.location.origin;
-			// Ajax call for receiving response after POST req
-			$.post(currentURL + "/api/friends", newUser, function(data) {
-				$("#bestFriend").text(data.name);
-				$("#bestFriendPhoto").attr("src", data.photo);
-				$("#bestFriendModal").modal("toggle");
-			});
-		} else {
-			// If a required field is missing, show alert
-			alert("Survey is incomplete!");
-		}
-	});
-</script> -->

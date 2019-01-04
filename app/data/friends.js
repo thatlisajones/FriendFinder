@@ -1,6 +1,6 @@
 var friends=[
   {
-    "name":"Anvil Sward",
+    "name":"Hockey Star Anvil Sward",
     "photo":"/images/ai_face_1.jpg",
     "scores":[
         5,
@@ -16,7 +16,7 @@ var friends=[
       ]
   },
   {
-    "name":"Jo Jelstead",
+    "name":"Pet Psychologist Jo Jelstead",
     "photo":"/images/ai_face_2.jpg",
     "scores":[
         1,
@@ -32,7 +32,7 @@ var friends=[
       ]
   },
   {
-    "name":"ZeZe Barzin",
+    "name":"Housewares Model ZeZe Barzin",
     "photo":"/images/ai_face_3.jpg",
     "scores":[
         3,
@@ -48,7 +48,7 @@ var friends=[
       ]
   },
   {
-    "name":"Welton Wile",
+    "name":"Author Welton Wile",
     "photo":"/images/ai_face_4.jpg",
     "scores":[
         2,
@@ -64,7 +64,7 @@ var friends=[
       ]
   },
   {
-    "name":"Jarma Kitzch",
+    "name":"Disgraced Senator Jarma Kitzch",
     "photo":"/images/ai_face_5.jpg",
     "scores":[
         4,
@@ -80,7 +80,7 @@ var friends=[
       ]
   },
   {
-    "name":"Barrier Phillips",
+    "name":"Marine Biologist Barrier Phillips",
     "photo":"/image/ai_face_6.jpg",
     "scores":[
         3,
@@ -96,7 +96,7 @@ var friends=[
       ]
   },
   {
-    "name":"Westerley Cragg-Smith",
+    "name":"General Westerley Cragg-Smith",
     "photo":"/images/ai_face_7.jpg",
     "scores":[
         3,
@@ -112,7 +112,7 @@ var friends=[
       ]
   },
   {
-    "name":"Bille Lavendor",
+    "name":"Bassoonist Bille Lavendor",
     "photo":"/images/ai_face_8.jpg",
     "scores":[
         5,
@@ -128,7 +128,7 @@ var friends=[
       ]
   },
   {
-    "name":"Rockwell D. Jones",
+    "name":"Chef Rockwell D. Jones",
     "photo":"/images/ai_face_9.jpg",
     "scores":[
         1,
@@ -144,7 +144,7 @@ var friends=[
       ]
   },
   {
-    "name":"Scottie Von Melrose",
+    "name":"Celebrity Dentist Scottie Von Melrose",
     "photo":"/images/ai_face_10.jpg",
     "scores":[
         5,
@@ -160,7 +160,7 @@ var friends=[
       ]
   },
   {
-    "name":"Indigo Marks",
+    "name":"Mortgage Broker Indigo Marks",
     "photo":"/image/ai_face_11.jpg",
     "scores":[
         2,
@@ -176,7 +176,7 @@ var friends=[
       ]
   },
   {
-    "name":"Quellen Darner",
+    "name":"Odd Duck Quellen Darner",
     "photo":"/images/ai_face_12.jpg",
     "scores":[
         2,
