@@ -163,7 +163,7 @@
             Submit </button>
 
         <hr>
-        <a href="/api/friends" id="consoleAPIFriends"> API Friends List </a>
+        <a href="/api/friends" id="APIFriends"> API Potential Friends</a>
         <br>
         <br>
     </div>
@@ -184,8 +184,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" id="extra-button" data-dismiss="modal">Close</button>
-                    <!-- <button type="button" class="btn btn-primary" id="modal-button">Save changes</button> -->
-                    
+                                        
                 </div>
             </div>
         </div>
@@ -208,8 +207,7 @@
             if (newFriend.friendName == "" || newFriend.photoURL == "" || newFriend.scoreArray.includes(NaN)) {
                 console.log("Please fill in all required info.");
                 $(".modal-body").text("Please fill in all required info.");
-                // $("#extra-button").addClass("hidden");
-                // $("#modal-button").text("Okay");
+                
                 $.ajax({ url: "/api/friends", method: "GET" })
                     .then(function (friendsData) {
                         console.log(friendsData.length)
@@ -272,12 +270,9 @@
                 });
             }
         });
-        // $(".dropdown-menu li a").click(function () {
-        //     event.preventDefault();
-        //     var selText = $(this).text();
-        //     $(this).parents(".btn-group").find(".dropdown-toggle").html(selText + " <span class='caret'></span>").addClass("completed");
-        // })
+        
+        
     </script>
-</body>
+ </body>
 
 </html>
