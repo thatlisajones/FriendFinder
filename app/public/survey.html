@@ -197,12 +197,17 @@
         
         $("#submit").on("click", function (event) {
             event.preventDefault();
+            var questionOne = $("#q1").val()
+            console.log("?1: ",questionOne);
+            
             var newFriend = {
                 friendName: $("#name").val().trim(),
                 photoURL: $("#photo").val().trim(),
-                scoreArray: [parseInt($("#q1").text()), parseInt($("#q2").text()), parseInt($("#q3").text()), parseInt($("#q4").text()), parseInt($("#q5").text()), parseInt($("#q6").text()), parseInt($("#q7").text()), parseInt($("#q8").text()), parseInt($("#q9").text()), parseInt($("#q10").text())
+                scoreArray: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val()
                 ]
             }
+            console.log(newFriend);
+            
             // If requirements NOT met:
             if (newFriend.friendName == "" || newFriend.photoURL == "" || newFriend.scoreArray.includes(NaN)) {
                 console.log("Please fill in all required info.");
@@ -213,7 +218,7 @@
                         console.log(friendsData.length)
                     });
             }
-            // If requirements met:
+            // // If requirements met:
             else {
                 $.ajax({ url: "/api/friends", method: "GET" })
                     .then(function (friendsData) {
