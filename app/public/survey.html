@@ -40,14 +40,14 @@
 		<h3>Where do you stand?</h3>
 		<form>
 			<div class="form-group">
-				<input id="name" type="text" class="form-control" placeholder="Your name (required)">
+				<input id="name" type="text" class="form-control" placeholder="Your name (required)" required>
 			</div>
 			<div class="form-group">
-				<input id="photo" type="text" class="form-control" placeholder="Link to your profile photo (required)">
+				<input id="photo" type="text" class="form-control" placeholder="Link to your profile photo (required)" required>
 			</div>
 			<div class="form-group">
 				<label for="question1">The Earth is flat.</label>
-				<select class="form-control" id="q1">
+				<select class="form-control" id="q1" required>
 					<option value="empty">Rate your response</option>
 					<option value="1">1 strongly disagree</option>
 					<option value="2">2 disagree</option>
@@ -157,7 +157,7 @@
 			</div>
 		</form>
 		<br>
-           <button type="button" class="btn btn-lg btn-primary btn-block" data-target="#myModal" data-toggle="modal" id="submit">
+           <button type="submit" class="btn btn-lg btn-primary btn-block" data-target="#myModal" data-toggle="modal" id="submit">
             <span class="glyphicon glyphicon-list-alt">
             </span>
             Submit </button>
@@ -209,71 +209,75 @@
             console.log(newFriend);
             
             // If requirements NOT met:
-            if (newFriend.friendName == "" || newFriend.photoURL == "" || newFriend.scoreArray.includes(NaN)) {
+            if (newFriend.friendName == "" || newFriend.photoURL == "" || newFriend.scoreArray.includes('empty')) {
                 console.log("Please fill in all required info.");
                 $(".modal-body").text("Please fill in all required info.");
                 
-                $.ajax({ url: "/api/friends", method: "GET" })
-                    .then(function (friendsData) {
-                        console.log(friendsData.length)
-                    });
+                // $.ajax({ url: "/api/friends", method: "GET" })
+                //     .then(function (friendsData) {
+                //         console.log(friendsData.length)
+                //     });
             }
-            // // If requirements met:
-            else {
-                $.ajax({ url: "/api/friends", method: "GET" })
-                    .then(function (friendsData) {
-                        // console.log(friendsData.length)
-                        if (friendsData.length == 0) {
-                            // console.log("empty array")
-                            $(".modal-body").text("We can't find a match for you. You're one of a kind!");
-                        }
-                        else {
-                            var compatabilityScores = [];
-                            var scoresOnly = [];
-                            var minDif;
-                            function compare(me, friend) {
-                                var meArr = me['scoreArray'];
-                                var friendArr = friend['scoreArray[]'];
-                                var totalDif = 0;
-                                for (var i = 0; i < 10; i++) {
-                                    if (meArr[i] - parseInt(friendArr[i]) > 0) {
-                                        totalDif += Math.abs(meArr[i] - friendArr[i]);
-                                    }
-                                }
-                                var compatability = {
-                                    friendName: friend['friendName'],
-                                    photoURL: friend['photoURL'],
-                                    score: totalDif
-                                }
-                                compatabilityScores.push(compatability);
-                                scoresOnly.push(compatability.score);
-                                console.log(friend['friendName'], totalDif);
-                            }
-                            for (var i = 0; i < friendsData.length; i++) {
-                                var friend = friendsData[i];
-                                var friendScore = friend['scoreArray[]'];
-                                compare(newFriend, friend);
-                            }
-                            // console.log(compatabilityScores);
-                            // console.log(scoresOnly);
-                            // console.log(Math.min(...scoresOnly));
-                            for (var i = 0; i < compatabilityScores.length; i++) {
-                                friend = compatabilityScores[i]
-                                var friendScore = friend['score'];
-                                if (friendScore == Math.min(...scoresOnly)) {
-                                    // console.log(compatabilityScores[i]);
-                                    console.log("match", friend['friendName']);
-                                    $(".modal-body").text("");
-                                    $(".modal-body").append(friend['friendName']);
-                                    $(".modal-body").append("<img src=" + friend['photoURL'] + " class='img-responsive'>");
-                                }
-                            }
-                        }
-                    })
-                    $.post("/api/friends", newFriend, function (data) {
+            // // // If requirements met:
+            // else {
+            //     $.ajax({ url: "/api/friends", method: "GET" })
+            //         .then(function (friendsData) {
+            //             // console.log(friendsData.length)
+            //             if (friendsData.length == 0) {
+            //                 // console.log("empty array")
+            //                 $(".modal-body").text("We can't find a match for you. You're one of a kind!");
+            //             }
+            //             else {
+            //                 var compatabilityScores = [];
+            //                 var scoresOnly = [];
+            //                 var minDif;
+            //                 function compare(me, friend) {
+            //                     var meArr = me['scoreArray'];
+            //                     var friendArr = friend['scoreArray[]'];
+            //                     var totalDif = 0;
+            //                     for (var i = 0; i < 10; i++) {
+            //                         if (meArr[i] - parseInt(friendArr[i]) > 0) {
+            //                             totalDif += Math.abs(meArr[i] - friendArr[i]);
+            //                         }
+            //                     }
+            //                     var compatability = {
+            //                         friendName: friend['friendName'],
+            //                         photoURL: friend['photoURL'],
+            //                         score: totalDif
+            //                     }
+            //                     compatabilityScores.push(compatability);
+            //                     scoresOnly.push(compatability.score);
+            //                     console.log(friend['friendName'], totalDif);
+            //                 }
+            //                 for (var i = 0; i < friendsData.length; i++) {
+            //                     var friend = friendsData[i];
+            //                     var friendScore = friend['scoreArray[]'];
+            //                     compare(newFriend, friend);
+            //                 }
+            //                 // console.log(compatabilityScores);
+            //                 // console.log(scoresOnly);
+            //                 // console.log(Math.min(...scoresOnly));
+            //                 for (var i = 0; i < compatabilityScores.length; i++) {
+            //                     friend = compatabilityScores[i]
+            //                     var friendScore = friend['score'];
+            //                     if (friendScore == Math.min(...scoresOnly)) {
+            //                         // console.log(compatabilityScores[i]);
+            //                         console.log("match", friend['friendName']);
+            //                         $(".modal-body").text("");
+            //                         $(".modal-body").append(friend['friendName']);
+            //                         $(".modal-body").append("<img src=" + friend['photoURL'] + " class='img-responsive'>");
+            //                     }
+            //                 }
+            //             }
+            //         })
+            else{ 
+                $.post("/api/friends", newFriend, function (data) {
                     console.log(data)
                 });
+                $(".modal-body").text("is Joe");
             }
+                   
+            // }
         });
         
         
