@@ -1,14 +1,19 @@
-var path = require("path");
-var friends = require("../data/friends")
+var friendsData = require("../data/friends");
+//GET route for url /api/friends -- displays a JSON of all possible friends
 
 module.exports = function(app) {
-  app.get("/api/friends", function(req, res) {
-    res.json(friends);
-  });
+    app.get("/api/friends", function(req, res) {
+        return res.json(friendsData);
+    });
+    //POST route /api/friends -- handles incoming survey results and compatibility logic
+    app.post("/api/friends", function(req, res) {
+        var newFriend = req.body;
 
-  app.post("/api/friends", function(req, res) {
-    console.log("req.body in api routes",req.body);
-    
-      // friends.push(req.body);
-    //   compare friends function here res.json here
-  });}
+        console.log(newFriend);
+
+        //add code for the friend matching based on new friend details
+        newFriend.routeName = newFriend.name.replace(/\s+/g, "").toLowerCase();
+        console.log(`${newFriend.name} has been added to FakeFriend Finder.`);
+        friends.push(newFriend);
+        res.json(newFriend);
+    })};
