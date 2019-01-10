@@ -149,6 +149,26 @@
         </div>
     </div>
 
+    <!-- Modal after survey completion -->
+		<div id="bestFriendModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h3 class="modal-title">Your New Best Friend</h1>
+					</div>
+					<div class="modal-body">
+						<h2 id="bestFriend"></h2>
+						<img id="bestFriendPhoto" src="#">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery.js"></script>
 
@@ -198,3 +218,15 @@
 </body>
 
 </html>
+
+
+<!-- // Ajax call for receiving response after POST req
+$.post(currentURL + "/api/friends", newUser, function(data) {
+    $("#bestFriend").text(data.name);
+    $("#bestFriendPhoto").attr("src", data.photo);
+    $("#bestFriendModal").modal("toggle");
+});
+} else {
+// If a required field is missing, show alert
+alert("Survey is incomplete!");
+} -->
