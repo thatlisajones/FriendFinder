@@ -1,4 +1,4 @@
-var friends=[
+var friends = [
   {
     "name":"Hockey Star Anvil Sward",
     "photo":"/images/ai_face_1.jpg",

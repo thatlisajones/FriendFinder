@@ -162,7 +162,7 @@
     $(document).ready(function() {
         function runFriendQuery() {
             $.ajax({url:"/api/friends", method: "GET"})
-            .then(function(friendData) {
+            .then(function(friendsData) {
                 console.log(friendsData);
             })
         };
