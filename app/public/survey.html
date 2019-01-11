@@ -201,8 +201,8 @@
             photo: $("#photo").val().trim(),
             questions: values
           };
-          console.log(values);
-          console.log(newFriend);
+          console.log("values", values);
+          console.log("new Friend",newFriend);
           var currentURL = window.location.origin;
     
           $.post(currentURL + "/api/friends", newFriend)

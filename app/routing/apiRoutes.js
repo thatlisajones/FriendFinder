@@ -26,26 +26,27 @@ module.exports = function(app) {
   });
 
   app.post("/api/friends", function(req, res) {
-    console.log(req.body.values);
+    console.log("req.body: ", req.body);
+    console.log("body of post questions: ",req.body.questions);
 
-    // Receive user details (name, photo, values)
+    // Receive user details (name, photo, questions)
     var user = req.body;
 
-    // parseInt for values
-    for(var i = 0; i < user.values.length; i++) {
-      user.values[i] = parseInt(user.values[i]);
+    // parseInt for questions
+    for(var i = 0; i < user.questions.length; i++) {
+      user.questions[i] = parseInt(user.questions[i]);
     }
 
-    // default friend match is the first friend but result will be whoever has the minimum difference in values
+    // default friend match is the first friend but result will be whoever has the minimum difference in questions
     var compatibilityValue = 0;
     var minimumDifference = 40;
 
-    // in this for-loop, start off with a zero difference and compare the user and the ith friend values, one set at a time
+    // in this for-loop, start off with a zero difference and compare the user and the ith friend questions, one set at a time
     //  whatever the difference is, add to the total difference
     for(var i = 0; i < friends.length; i++) {
       var totalDifference = 0;
-      for(var j = 0; j < friends[i].values.length; j++) {
-        var difference = Math.abs(user.values[j] - friends[i].values[j]);
+      for(var j = 0; j < friends[i].questions.length; j++) {
+        var difference = Math.abs(user.questions[j] - friends[i].questions[j]);
         totalDifference += difference;
       }
 
