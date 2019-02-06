@@ -1,196 +1,104 @@
+
 var friends = [
   {
-    "name":"Hockey Star Anvil Sward",
-    "photo":"./images/ai_face_1.jpg",
-    "questions":[
-        5,
-        2,
-        5,
-        3,
-        1,
-        2,
-        3,
-        4,
-        1,
-        1
-      ]
+    name: "Anvil Sward",
+    photo: "https://goo.gl/images/mFxWDH",
+    scores: [
+      "5",
+      "1",
+      "4",
+      "4",
+      "5",
+      "1",
+      "2",
+      "5",
+      "4",
+      "1"
+    ]
   },
   {
-    "name":"Pet Psychologist Jo Jelstead",
-    "photo":"./images/ai_face_2.jpg",
-    "questions":[
-        1,
-        2,
-        3,
-        5,
-        4,
-        3,
-        2,
-        2,
-        1,
-        5
-      ]
+    name: "Jo Jelstead",
+    photo: "https://goo.gl/images/R7Vf4u",
+    scores: [
+      "4",
+      "2",
+      "5",
+      "1",
+      "3",
+      "2",
+      "2",
+      "1",
+      "3",
+      "2"
+    ]
   },
   {
-    "name":"Housewares Model ZeZe Barzin",
-    "photo":"./images/ai_face_3.jpg",
-    "questions":[
-        3,
-        2,
-        1,
-        1,
-        2,
-        3,
-        4,
-        4,
-        5,
-        5
-      ]
+    name: "ZeZe Barzin",
+    photo: "https://goo.gl/images/sXKZyX",
+    scores: [
+      "5",
+      "2",
+      "2",
+      "2",
+      "4",
+      "1",
+      "3",
+      "2",
+      "5",
+      "5"
+    ]
   },
   {
-    "name":"Author Welton Wile",
-    "photo":"./images/ai_face_4.jpg",
-    "questions":[
-        2,
-        4,
-        5,
-        5,
-        3,
-        4,
-        1,
-        3,
-        3,
-        2
-      ]
+    name: "Welton Wile",
+    photo: "https://goo.gl/images/Gn8Emn",
+    scores: [
+      "3",
+      "3",
+      "4",
+      "2",
+      "2",
+      "1",
+      "3",
+      "2",
+      "2",
+      "3"
+    ]
   },
   {
-    "name":"Disgraced Senator Jarma Kitzch",
-    "photo":"./images/ai_face_5.jpg",
-    "questions":[
-        4,
-        3,
-        5,
-        2,
-        1,
-        3,
-        5,
-        2,
-        1,
-        3
-      ]
+    name: "Jarma Kitzch",
+    photo: "https://goo.gl/images/fMpm6m",
+    scores: [
+      "4",
+      "3",
+      "4",
+      "1",
+      "5",
+      "2",
+      "5",
+      "3",
+      "1",
+      "4"
+    ]
   },
   {
-    "name":"Marine Biologist Barrier Phillips",
-    "photo":"./image/ai_face_6.jpg",
-    "questions":[
-        3,
-        2,
-        3,
-        2,
-        5,
-        5,
-        5,
-        1,
-        1,
-        4
-      ]
-  },
-  {
-    "name":"General Westerley Cragg-Smith",
-    "photo":"./images/ai_face_7.jpg",
-    "questions":[
-        3,
-        2,
-        3,
-        5,
-        4,
-        5,
-        4,
-        3,
-        2,
-        1
-      ]
-  },
-  {
-    "name":"Bassoonist Bille Lavendor",
-    "photo":"./images/ai_face_8.jpg",
-    "questions":[
-        5,
-        4,
-        3,
-        2,
-        1,
-        5,
-        4,
-        3,
-        2,
-        1
-      ]
-  },
-  {
-    "name":"Chef Rockwell D. Jones",
-    "photo":"./images/ai_face_9.jpg",
-    "questions":[
-        1,
-        2,
-        3,
-        1,
-        2,
-        5,
-        4,
-        5,
-        4,
-        3
-      ]
-  },
-  {
-    "name":"Celebrity Dentist Scottie Von Melrose",
-    "photo":"/images/ai_face_10.jpg",
-    "questions":[
-        5,
-        4,
-        3,
-        3,
-        2,
-        2,
-        1,
-        1,
-        3,
-        3
-      ]
-  },
-  {
-    "name":"Mortgage Broker Indigo Marks",
-    "photo":"./image/ai_face_11.jpg",
-    "questions":[
-        2,
-        4,
-        5,
-        1,
-        2,
-        4,
-        3,
-        3,
-        4,
-        2
-      ]
-  },
-  {
-    "name":"Odd Duck Quellen Darner",
-    "photo":"./images/ai_face_12.jpg",
-    "questions":[
-        2,
-        4,
-        3,
-        1,
-        4,
-        5,
-        5,
-        1,
-        3,
-        4
-      ]
+    name: "Barrier Phillips",
+    photo: "https://goo.gl/images/ofXHBt",
+    scores: [
+      "4",
+      "4",
+      "2",
+      "3",
+      "2",
+      "2",
+      "3",
+      "2",
+      "4",
+      "5"
+    ]
   }
-  ]
-  
-  module.exports = friends;
+
+];
+
+// Here we export the array. This makes it accessible to other files using require.
+module.exports = friends;
+
