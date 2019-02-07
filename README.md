@@ -6,5 +6,5 @@ This compatiblity-matching app uses Express and Node.js to capture user input an
 
 GitHub Repo: https://github.com/thatlisajones/FriendFinder
 
-!(https://github.com/thatlisajones/FriendFinder/blob/master/app/public/images/screencap_friendfinder.PNG)
+![screencap](https://github.com/thatlisajones/FriendFinder/blob/master/app/public/images/screencap_friendfinder.PNG)
 
