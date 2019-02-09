@@ -2,7 +2,7 @@
 var friends = [
   {
     name: "Anvil Sward",
-    photo: "https://goo.gl/images/mFxWDH",
+    photo: "https://github.com/thatlisajones/FriendFinder/blob/master/app/public/images/ai_face_2.jpg",
     scores: [
       "5",
       "1",
@@ -18,7 +18,7 @@ var friends = [
   },
   {
     name: "Jo Jelstead",
-    photo: "https://goo.gl/images/R7Vf4u",
+    photo: "https://github.com/thatlisajones/FriendFinder/blob/master/app/public/images/ai_face_3.jpg",
     scores: [
       "4",
       "2",
@@ -34,7 +34,7 @@ var friends = [
   },
   {
     name: "ZeZe Barzin",
-    photo: "https://goo.gl/images/sXKZyX",
+    photo: "https://github.com/thatlisajones/FriendFinder/blob/master/app/public/images/ai_face_4.jpg",
     scores: [
       "5",
       "2",
@@ -50,7 +50,7 @@ var friends = [
   },
   {
     name: "Welton Wile",
-    photo: "https://goo.gl/images/Gn8Emn",
+    photo: "https://github.com/thatlisajones/FriendFinder/blob/master/app/public/images/ai_face_5.jpg",
     scores: [
       "3",
       "3",
@@ -66,7 +66,7 @@ var friends = [
   },
   {
     name: "Jarma Kitzch",
-    photo: "https://goo.gl/images/fMpm6m",
+    photo: "https://github.com/thatlisajones/FriendFinder/blob/master/app/public/images/ai_face_6.jpg",
     scores: [
       "4",
       "3",
@@ -82,7 +82,7 @@ var friends = [
   },
   {
     name: "Barrier Phillips",
-    photo: "https://goo.gl/images/ofXHBt",
+    photo: "https://github.com/thatlisajones/FriendFinder/blob/master/app/public/images/ai_face_7.jpg",
     scores: [
       "4",
       "4",
